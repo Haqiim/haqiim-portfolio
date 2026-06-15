@@ -9,11 +9,13 @@ const cardsContainer = document.querySelector(".cards")
 const socialIcons = document.querySelectorAll(".social-icons")
 const seeMore = document.querySelector(".see-more")
 const para = document.querySelector(".hero-p")
+const mainHeader = document.querySelector(".main-header")
 const closeProjects = document.querySelector(".close-projects")
 const projectsPage = document.querySelector(".projects-page")
 const allProjectsContainer = document.querySelector(".all-projects")
 let projects = [];
 const hero = document.querySelector(".h-name")
+const heading =  document.querySelector(".heading1")
 
 addEventListener("DOMContentLoaded",()=>{
   fetchProjects()
@@ -78,8 +80,8 @@ closeProjects.onclick = () => {
 }
 
 addEventListener("mousemove", (e)=>{
-    pointer.style.top = `${e.y - 10}px`
-    pointer.style.left = `${e.x - 10}px`
+    pointer.style.top = `${e.y - 7.5}px`
+    pointer.style.left = `${e.x - 7.5}px`
 })
 
 clickables.forEach(item => {
@@ -114,7 +116,17 @@ function handleScroll(e) {
     }
   })
 
+  adjustMainHeader()
+
   useParallax(e)
+}
+
+function adjustMainHeader(){
+  if(scrollY > 50){
+    mainHeader.classList.add("detachedHeader")
+  }else{
+    mainHeader.classList.remove("detachedHeader")
+  }
 }
 
 window.addEventListener("scroll", handleScroll)

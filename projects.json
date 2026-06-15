@@ -3,7 +3,7 @@
     {
       "id": 0,
       "title": "Countries viewer app",
-      "stack": ["nextjs", "tailwind css", "redux toolkit", "restcountries api"],
+      "stack": ["nextjs", "tailwind css", "redux toolkit", "rest countries api"],
       "description": "A frontend web application that makes use of the rest country api to display information about different countries in the world.",
       "tags": ["frontend", "next, tailwind", "restcountries api"],
       "imgSrc": ["../assets/images/countries.png"],
